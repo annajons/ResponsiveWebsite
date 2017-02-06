@@ -1,0 +1,41 @@
+.contentPage p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contentPage h2{
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 30px;
+  margin-top: 70px;
+  color: #C93900;
+  margin-bottom: 60px;
+}
+
+.contentPage h3{
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contentPage h4{
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 15px;
+  margin-bottom: 70px;
+}
+
+#map {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10%;
+}
+
+#map iframe {
+  width: 80%;
+  height: 400px;
+  margin-left: 5%;
+}

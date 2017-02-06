@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kopar Restaurant</title>
+    <link rel="icon" type="image/png" href="Img/logo.png" />
+
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/contentStyles.css">
+    <script src="JS/scripts.js"></script>
+  </head>
+
+  <body>
+    <!-- Top Menu Bar -->
+    <div id="topBar">
+      <div id="topMenuWrapper">
+        <img src="Img/logo.png" onclick="switchContent('landing')">
+        <img id="toggleMenu" onclick="showToggle()" src="Img/hamburger.png">
+        <div id="topMenu">
+          <ul>
+            <li onmouseenter="showDropdown(0)" onmouseleave=showDropdown(1)>
+              <a class="dropdown">Menus</a>
+              <div id="dropdownMenu" class="dropdown-content">
+                <a onclick="switchContent('dinnerMenu')">Dinner</a>
+                <a onclick="switchContent('lunchMenu')">Lunch</a>
+                <a onclick="switchContent('groupMenu')">Group</a>
+                <a onclick="switchContent('wineMenu')">Wine</a>
+                <a onclick="switchContent('drinksMenu')">Drinks</a>
+              </div>
+            </li>
+            <li onclick="switchContent('aboutUs')"><a>About Us</a></li>
+            <li onclick="switchContent('bookTable')"><a>Book a Table</a></li>
+            <li onclick="switchContent('giftCert')"><a>Buy a Gift Certificate</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="sideMenu" style="position: absolute; width: 225px; height: calc(100% - 100px); background: #333; z-index: 10; top: 75px;">
+      <ul>
+        <li>
+          <a class="dropdown">Menus:</a>
+          <ul>
+            <li onclick="switchContent('dinnerMenu'), showToggle()"><a>Dinner</a></li>
+            <li onclick="switchContent('lunchMenu'), showToggle()"><a>Lunch</a></li>
+            <li onclick="switchContent('groupMenu'), showToggle()"><a>Group</a></li>
+            <li onclick="switchContent('wineMenu'), showToggle()"><a>Wine</a></li>
+            <li onclick="switchContent('drinksMenu'), showToggle()"><a>Drinks</a></li>
+          </ul>
+        </li>
+        <li onclick="switchContent('aboutUs'), showToggle()">
+          <a>About Us</a>
+        </li>
+        <li onclick="switchContent('bookTable'), showToggle()"><a>Book a Table</a></li>
+        <li onclick="switchContent('giftCert'), showToggle()"><a>Buy a Gift Certificate</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <!-- Content -->
+      <section class="contentPage" id="landing">
+
+        <img src="img/logo.png" style="position: absolute; margin-left: calc(50% - 100px); width: 200px; margin-top: 80px; height: 200px;">
+
+        <div class="carousel">
+          <div class="item slide-in" id="item1"><img src="img/image45.jpg"></div>
+          <div class="item slide-in" id="item2"><img src="img/image22.jpg"></div>
+          <div class="item slide-in" id="item3"><img src="img/image49.jpg"></div>
+          <div class="item slide-in" id="item4"><img src="img/image30.jpg"></div>
+          <div class="item slide-in" id="item5"><img src="img/image50.jpg"></div>
+          <div class="controls">
+              <a href="#item1" class="btn">•</a>
+              <a href="#item2" class="btn">•</a>
+              <a href="#item3" class="btn">•</a>
+              <a href="#item4" class="btn">•</a>
+              <a href="#item5" class="btn">•</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dinner Menu -->
+      <section class="contentPage" id="dinnerMenu">
+              <h1 style="background: url(Img/dinner.jpg); background-size: cover">Dinner</h1>
+              <h2>The Kopar Adventure</h2>
+              <h3>Kopar Adventure**</h3>
+                <p>The chefs have put together a nine course menu
+                  *Only for the table to share
+                  *Contains nuts
+                <h4>10.900 kr. per person </h4>
+            <h3>Fish Adventure* Three course menu*</h3>
+                <p>Cod tongues with garlic and sherry cream cheese
+                  Catch of the day prepared in a modern way
+                  Daim cheesecake with skyr sorbet</p>
+                <h4>8.900 kr. per person
+                  *Contains nuts</h4>
+
+            <h3>Appetizer Adventure* Appetizer to please and cheer </h3>
+              <p>We have put together a appetizer adventure menu of our most popular courses.
+                Six tasting courses and a pre drink.
+                Let us take you on a real appetizer adventure.
+                Glass of sparkling wine
+                Cod tongues served with sherry and garlic flavoured cream cheese
+                Tuna with garlic chips
+                Icelandic scallops with dill cream and wakame
+                Crab cake with fluffy remoulade
+                Rockcrab soup with crab meat and shrimps
+                Duck spring roll with date sauce and pear salad.
+                <h4>5.900 kr. per person
+                *only served for the whole table to share.
+                *contains nuts</h4>
+
+                    <h2>Kopar recommends</h2>
+                      <h3>Cod tongues</h3>
+                        <p>Served with sherry and garlic
+                flavoured cream cheese
+                and lemon dip.<p>
+                <h4>2.290 kr. </h4>
+
+                      <h3>Tuna “harbour style”</h3>
+                        <p>Lightly seared tuna with garlic chips.</p>
+                <h4>2.290 kr.</h4>
+
+                      <h3>The Holy Crab</h3>
+                        <p>A taster of all things crabby,
+                rockcrab soup, crab cake and crab salad.
+                All served together on a single platter. </p>
+                <h4>2.790 kr.</h4>
+
+              <h2>Delicious from the shell</h2>
+                <h3>Icelandic Scallops from Breiðafjörður</h3>
+                  <p>Fresh scallop ceviche with wagame sala, dill mayo and crispy dill crumble.</p>
+              <h4>2.390 kr.</h4>
+
+                <h3>Rockcrab soup</h3>
+                  <p>Rich and delicious soup with crab meat, shrimp, spinach and bean sprouts.</p>
+                  <h4>2.790 kr.</h4>
+
+                <h3>Duck spring rolls</h3>
+                  <p>With date sauce and pear salad.</p>
+              <h4>2.490 kr.</h4>
+
+                <h3>Crab cakes</h3>
+                  <p>Spicy crab cakes with a crunchy exterior, served with fluffy remoulade.</p>
+              <h4>2.490 kr.</h4>
+
+                <h3>Grilled langoustine</h3>
+                  <p>With lobster champagne sauce, grilled asparagus and pinapple.</p>
+              <h4>small 4.190 kr, big 7.900 kr.</h4>
+
+                <h3>Mussels and garlicky french fries</h3>
+                  <p>Mussels steamed in a creamy white wine sauce, served with garlicky french fries and aioli. </p>
+                  <h4>small 2.490 kr. Big 4.490 kr.</h4>
+
+              <h2>Brazzerie courses</h2>
+                <h3>Duck spring roll</h3>
+                  <p>With date sauce and pear salad.</p>
+                  <h4>2.490 kr.</h4>
+
+                <h3>Deepfried Camembert</h3>
+                  <p>With cranberries and pecan nuts</p>
+                  <h4>1.890 kr.</h4>
+
+                <h3>Garlicky fries - Vegan</h3>
+                  <p>Served with aioli.</p>
+                  <h4>1.290 kr.</h4>
+
+                <h3>Cheese assortments for the cheese lover*</h3>
+                  <p>3 Sorts of top cheese for the cheese enthusiast.Served parma ham,olives and honey.</p>
+                  <h4>2.390 kr.*Contains nuts</h4>
+
+                <h3>Truffle fries</h3>
+                  <p>Potato chips with truffle mayo</p>
+                  <h4>1.290 kr.</h4>
+
+                <h3>Green salad</h3>
+                  <p>Fresh green salad.</p>
+                  <h4>990 kr.</h4>
+
+                <h3>Cured cucumber feta cheese and pickled mustard vinaigrette</h3>
+                  <p>Served with semi-dried cherry tomatoes, olives and mustard vinaigrette.</p>
+                   <h4>2.190 kr.</h4>
+
+                <h3>Filled and fried sweet potato -Vegan</h3>
+                  <p>Organic sweet potato filled with moroccan spiced sweet potato filling and crispy chickpeas. Topped with tahini sauce and cilantro.</p>
+                  <h4>2.190 kr.</h4>
+
+              <h2>Main Courses</h2>
+
+                <h3>Catch of the day*</h3>
+                  <p>Prepared with a modern and exciting twist every day.</p>
+                  <h4>4.390 kr *May contain nuts</h4>
+
+                <h3>Salted fillet of Icelandic cod*</h3>
+                  <p>With butternut squash puree and a warm salad of butternut, jerusalem artichokes and quinoa. Served with roasted hazelnuts and mandarin sauce.</p>
+                  <h4>4.990 kr. *Contains nuts</h4>
+
+                <h3>Zucchini “spaghetti style” with chick pea balls.</h3>
+                  <p>Accompanied by roasted cherry tomatoes and generous shavings of parmeggiano and basil.</p>
+                  <h4>*Contains nuts 4.390 kr.</h4>
+
+                <h3>Baked ling, capers and scallops</h3>
+                  <p>Accompanied by patotoes, cauliflower, a creamy white wine sauce and sautéed spinach.</p>
+                  <h4>4.790 kr.</h4>
+
+                <h3>Icelandic fillet of lamb with crispy fat</h3>
+                  <p>Wonderfully succulent with truffle mashed potatoes, grilled carrots, bearnaise sauce and a puree of mushroom and port.</p>
+                  <h4>6.290 kr.</h4>
+
+                <h3>Grilled langoustine</h3>
+                  <p>Served with lobster champagne sauce, grilled asparagus and pineapple.</p>
+                  <h4>big 7.900 kr.</h4>
+
+                <h3>Lobster and Crab risotto</h3>
+                  <p>Creamy risotto packed full with the biggest treats of the Ocean: Crab and Lobster. Shellfish sauce and fennel salad.</p>
+                  <h4>4.990 kr.</h4>
+
+                <h3>Mushroom and polenta steak</h3>
+                  <p>Crispy on the outside and juicy on the inside. Served with a parsnip pure, fried gherkins and aioli, soya marinated salsify and a yusu-lime dressing.</p>
+                  <h4>4.490 kr.</h4>
+
+              <h2>Dessert</h2>
+
+                <h3>Daim Cheesecake</h3>
+                  <p>Soft cheesecake with raspberry sauce, skyr sorbet and white chocolate.</p>
+                  <h4>2.290 kr.</h4>
+
+                <h3>Adventurous desserts**</h3>
+                  <p>Mixed desserts for the table to share.</p>
+                  <h4>2.490 kr. per person *Served for minimum two *May contain nuts</h4>
+
+                <h3>Caramel cake</h3>
+                  <p>Served with italian meringue, dulse de leche and white chocolate mousse and a lemon sorbet.</p>
+                  <h4>2.290 kr.</h4>
+
+                <h3>Sorbet and date crumble - Vegan</h3>
+                  <p>Deliciously light and airy sorbet served with date crumble and fresh berries.</p>
+                  <h4>2.290 kr. per person</h4>
+
+                <h3>SKYR, blueberries and almond créme brulée*</h3>
+                  <p>Warm apple cinnamon compote with almond créme brulée and skyr pudding. Served with pistachios and blueberry sorbet.</p>
+                  <h4>*Contains nuts</h4>
+      </section>
+
+      <!-- Lunch Menu -->
+      <section class="contentPage" id="lunchMenu">
+              <h1  style="background: url(Img/lunch.jpg); background-size: cover">Lunch</h1>
+          <h2>Kopar recommends</h2>
+            <h3>Rock crab soup</h3>
+              <p>Rich and creamy crab and shellfish soup with delicious shellfish.</p>
+                <h4>1.990 kr.</h4>
+            <h3>Filled and fried sweet potato - Vegan</h3>
+              <p>Organic sweet potato filled with a moroccan spiced sweet potato filling and crispy chickpeas. Topped with tahini sauce and cilantro.</p>
+                <h4>1.990 kr.</h4>
+            <h3>Cod tongues in Orly</h3>
+              <p>Served with sherry and garlic flavoured cream cheese and lemon dip.</p>
+                <h4>1.990 kr.</h4>
+            <h3>Garlicky fries - Vegan</h3>
+              <p>Served with aioli.</p>
+                <h4>1.290 kr.<</h4>
+            <h3>Duck spring rolls</h3>
+              <p>With date sauce and pear salad.</p>
+                <h4>2.090 kr.</h4>
+          <h2>Main Courses</h2>
+            <h3>Catch of the day*</h3>
+              <p>Fresh fish and fresh ideas. The chefs prepare a new and exciting dish every day with the catch of the day. We look forward to surprise you and your taste buds.</p>
+                <h4>2.390 kr. *May contain nuts</h4>
+            <h3>Beef Burger</h3>
+              <p>Pulled Beef Ribs.With mozzarella, bacon, and salad. Accompanied by real potato wedgesand mustard sauce.</p>
+                <h4>2.490 kr.</h4>
+            <h3>Fish and Chips</h3>
+              <p>Served with fried potato wedges, coleslaw and truffle mayo.</p>
+                <h4>2.490 kr.</h4>
+            <h3>Mussels and garlicky french fries</h3>
+              <p>Mussels steamed in a creamy white wine sauce, served with garlicky french fries and aioli.</p>
+                <h4>2.690 kr.</h4>
+            <h3>Zucchini “spaghetti style” with chick pea balls*</h3>
+              <p>Accompanied by a pure of white beans, roasted cherry tomatoes and grapes, generous shaves of parmeggiano and basil.</p>
+                <h4>2.290 kr.*Contains nuts.</h4>
+                <p>Get fresh fish instead of the vegetarian chickpea balls for only 390 kr.</p>
+          <h2>Dessert</h2>
+            <h3>Daim Cheesecake</h3>
+              <p>Soft cheesecake with raspberry sauce,skyr-sorbet and white chocolate.</p>
+                <h4>1.490 kr.</h4>
+            <h3>Sorbet and date crumble - Vegan</h3>
+              <p>Delicously light and airy sorbet served with a date cruel and fresh berries.</p>
+                <h4>1.490 kr.</h4>
+          <h2>Adventure</h2>
+            <h3>Kopar Adventure**</h3>
+              <p>A four course Adventure menu where the dishes are brought to the table for you to share. We want you to experience the Icelandic flavours at Kopar.</p>
+                <h4>6.290 kr. per person. *May contain nuts. *Only for the table to share.</h4>
+          <h2>Fish festival</h2>
+            <h3>A two course fish feast where the freshest product is of the upmost importance*</h3>
+              <p>Deliciously rich and creamy shellfish soup with rock crab.</p>
+              <p>Catch of the day prepared with a modern and exciting twist every day</p>
+                <h4>3.590 kr.*May contain nuts</h4>
+      </section>
+
+      <!-- Group Menu -->
+      <section class="contentPage" id="groupMenu">
+              <h1  style="background: url(Img/desert.jpg); background-size: cover">Group Menu</h1>
+          <h2>Menu 1 - by the harbour</h2>
+            <h3>Crab soup</h3>
+              <p>With shrimps and crab.
+             <h3>Lightly salted Cod</h3>
+              <p>With Icelandic langoustine and mashed potatoes.
+             <h3>Daim cheesecake</h3>
+              <p>With raspberries and skyr sorbet.</p>
+                <h4>9.900 kr.</h4>
+          <h2>Menu 2 - Exploring the land and sea</h2>
+            <h3>Icelandic scallops</h3>
+              <p>With dill cream</p>
+            <h3>Fillet of lamb</h3>
+              <p>With creamed mushrooms and bearnaise sauce.</p>
+            <h3>Chocolate</h3>
+              <p>Chocolate desert a la Kopar.</p>
+                <h4>10.900 kr.</h4>
+          <h2>Menu 3 - Rock Crab Party from Hvalfjörður</h2>
+            <h3>Crab duet with crab soup and crab cake</h3>
+              <p>Crab soup and crab cake</p>
+            <h3>Crab Risotto</h3>
+              <p>Crab Risotto with shrimp and apple salad.</p>
+            <h3>Adventurous desert</h3>
+              <p>A complete taste of our premium desert selection.</p>
+                <h4>10.400 kr.</h4>
+          <h2>Menu 4 - Adventure menu</h2>
+              <p>We would like to take you on an adventure. We have put together a menu that consists of 9 courses each created to please your palate and surprise your taste buds. The adventure is designed so you and your fellowship can enjoy the evening and let us take care of everything.</p>
+                <h4>.900 kr.</h4>
+        <h1>Lunch Group Menu</h1>
+          <h2>Menu A - Fish Adventure</h2>
+            <h3>Crab soup</h3>
+              <p>Rich and deliciously creamy crab soup with fresh spinach, sweet corn and whipped coconut milk.</p>
+            <h3>Catch of the day</h3>
+              <p>Fresh fish and fresh ideas. The chefs prepare a new and exciting dish every day with the catch of the day. We look forward to surprise you and your taste buds.</p>
+                <h4>3.590 kr.</h4>
+          <h2>Menu B - Out in the countryside</h2>
+            <h3>Crispy and sticky Turkey leg</h3>
+              <p>Slow roasted until fall of the bone tender and cryo-fried to achieve the crispy exterior. Served with a whiskey sauce and mashed potatoes.</p>
+            <h3>Desert a la Kopar</h3>
+                <h4>5.490 kr.</h4>
+          <h2>Menu C - Kopar lunch Adventure</h2>
+              <p>We offer a four course lunch adventure that consist of our most popular courses each week.</p>
+                <h4>6.290 kr.coffee/tea included</h4>
+      </section>
+
+      <!-- wine Menu -->
+      <section class="contentPage" id="wineMenu">
+        <h1  style="background: url(Img/wine.jpg); background-size: cover">Wine List</h1>
+      </section>
+
+      <!-- Drink Menu -->
+      <section class="contentPage" id="drinksMenu">
+        <h1  style="background: url(Img/drink.jpg); background-size: cover">Drink</h1>
+      </section>
+
+      <!-- About Us -->
+      <section class="contentPage" id="aboutUs">
+        <h1  style="background: url(Img/table.jpg); background-size: cover">About Us</h1>
+
+        <h2>The Idea</h2>
+        <p>Surprise and seductive are the keywords at the bar. Traditional cocktails meet new waves of the cocktail world. You can enjoy a nice drink on our terrace by the harbour at the happy hour or sit outside after a nice dinner with coffee and cognac. If the weather is not cooperative we have heating lamps. The pride of the bar is the Icelandic fisherman’s Collection, a wall with an incredible selection of cognac and whiskey.</p>
+
+        <h2>The Atmosphere</h2>
+        <p>Experience of restaurants is put together of different things. Of course the food is the most important, but service, company and environment is also very important. Kopar is influenced by its environments. The old harbour, the ships, the vibrant city centre, old and new in a surprising mix.</p>
+
+        <h2>The Food</h2>
+        <p>What makes Kopar special are the exciting ingredients and the variety of dishes. On the menu, new and old methods and recipes meet, traditional ingredients and surprising ones. Kopar is for example the first restaurant in Reykjavík to serve Icelandic rock crab. Kopar’s brasserie-dishes give our guests the opportunity to explore the world of food in one night for a reasonable price. The brasserie-dishes are small dishes that are a delicious add-on to traditional courses.</p>
+
+        <h1>Location</h1>
+        <div id= "map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6958.2335464019225!2d-21.943904!3d64.1510958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf44f1542a05c5f45!2sKopar+Restaurant!5e0!3m2!1sen!2sca!4v1485216137023"
+            class="google-map"
+            frameborder="0"
+            style="border:0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h1>The Old Harbour</h1>
+        <p>Reykjavík is a fishing village. Everything is full of life by the old harbour. In the morning the fishermen go to sea and return later in the day with their catch of the day. As you stand on the pier you can feel the history of Reykjavík and watch the harbour life, the fishermen, people walking and enjoying life or young kids with their rods trying to catch some fish. The fresh and energetic atmosphere of the old harbour is part of the experience when you dine at Kopar.</p>
+      </section>
+
+      <!-- About Us -->
+      <section class="contentPage" id="bookTable">
+        <h1  style="background: url(Img/table.jpg); background-size: cover">Book A Table</h1>
+      </section>
+
+      <!-- About Us -->
+      <section class="contentPage" id="giftCert">
+        <h1  style="background: url(Img/gift.jpg); background-size: cover;">Buy a Gift</h1>
+
+      </section>
+
+      <!-- C
+      <section id="l">
+      </section>
+
+       -->
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      <p>Kopar | Geirsgötu 3 | 101 Reykjavík | Tel +354 567 2700 | info@koparrestaurant.is</p>
+    </div>
+  </body>
+</html>
