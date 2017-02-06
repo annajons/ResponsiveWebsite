@@ -2,13 +2,11 @@ var showHide = true;
 
 function showToggle() {
   if (showHide === false) {
-    //document.getElementById('sideMenu').style.display = 'block';
     document.getElementById('sideMenu').classList.toggle('show');
     showHide = true;
   }
   else {
     document.getElementById('sideMenu').classList.toggle('show');
-    //document.getElementById('sideMenu').style.display = 'none';
     showHide = false;
   }
 }
